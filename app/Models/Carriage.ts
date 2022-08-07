@@ -5,6 +5,24 @@ export default class Carriage extends BaseModel {
   @column({ isPrimary: true })
   public id: number
 
+  @column()
+  public CNPJ: number
+
+  @column()
+  public razao: string
+
+  @column()
+  public fantasia: string
+
+  @column()
+  public endereco: string
+
+  @column()
+  public contato: string
+
+  @column()
+  public email: string
+
   @column.dateTime({ autoCreate: true })
   public createdAt: DateTime
 
