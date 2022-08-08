@@ -2,6 +2,19 @@ import { DateTime } from 'luxon'
 import { BaseModel, column } from '@ioc:Adonis/Lucid/Orm'
 
 export default class Carriage extends BaseModel {
+  		/**
+		* @swagger
+		* components:
+			* schemas:
+			*      User:
+			*        type: object
+			*        properties:
+			*          name:
+			*            type: string
+			*          email:
+			*            type: string
+			*
+		*/
   @column({ isPrimary: true })
   public id: number
 

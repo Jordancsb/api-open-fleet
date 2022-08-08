@@ -2,6 +2,19 @@ import { DateTime } from 'luxon'
 import { BaseModel, column } from '@ioc:Adonis/Lucid/Orm'
 
 export default class Driver extends BaseModel {
+		/**
+		* @swagger
+		* components:
+			* schemas:
+			*      User:
+			*        type: object
+			*        properties:
+			*          name:
+			*            type: string
+			*          email:
+			*            type: string
+			*
+		*/
   @column({ isPrimary: true })
   public id: number
 
@@ -9,16 +22,16 @@ export default class Driver extends BaseModel {
   public nome: string
 
   @column()
-  public CNH: number
+  public CNH: string
 
   @column()
   public categoria: string
 
   @column()
-  public contato: number
+  public contato: string
 
   @column()
-  public CEP: number
+  public CEP: string
 
   @column.dateTime({ autoCreate: true })
   public createdAt: DateTime
