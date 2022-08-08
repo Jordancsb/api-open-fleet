@@ -20,6 +20,29 @@
 
 import Route from '@ioc:Adonis/Core/Route'
 
-Route.get('/', async () => {
+Route.group(() => {
+  Route.get('/', async () => {
   return { hello: 'world' }
-})
+  })
+  Route.resource('/drive', 'DriversController').apiOnly()
+}).prefix('/api')
+
+Route.get('/api/drivers', 'DriversController.index')
+Route.post('/api/drivers', 'DriversController.store')
+Route.put('/api/drivers/:id', 'DriversController.show')
+Route.delete('/api/drivers/:id', 'DriversController.destroy')
+
+Route.get('/api/carriages', 'CarriagesController.index')
+Route.post('/api/carriages', 'CarriagesController.store')
+Route.put('/api/carriages/:id', 'CarriagesController.show')
+Route.delete('/api/carriages/:id', 'CarriagesController.destroy')
+
+Route.get('/api/vehicles', 'VehiclesController.index')
+Route.post('/api/dvehicles', 'VehiclesController.store')
+Route.put('/api/vehicles/:id', 'VehiclesController.show')
+Route.delete('/api/vehicles', 'VehiclesController.destroy')
+
+Route.get('/api/shipping', 'ShippingsController.index')
+Route.post('/api/shipping', 'ShippingsController.store')
+Route.put('/api/shipping/:id', 'ShippingsController.show')
+Route.delete('/api/shipping', 'ShippingsController.destroy')
