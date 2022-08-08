@@ -1,3 +1,5 @@
+## Escopo
+
 ### 
 
 <details>
@@ -61,8 +63,8 @@ No README do projeto explique:
 ## Projeto
 API de Gerenciamento de Veiculos e Motoristas para uma Transportadora realizar cadastrar e realizar fretes, o back-end está contruido em NodeJS usando TypeScript e Adonis5, conectado e armazenado banco de dados relacional (Postgres) usando ORM (Lucid). Utilizando Arquitetura MVC, sem a camada View.
 
-## Diagrama
-<img align="center" width="1000" src="resources/assets">
+### Linguagens e Frameworks 
+<img align="center" width="1000" src="./resources/assets/diagrama.JPG">
 
 
 ### Rodando a aplicação
